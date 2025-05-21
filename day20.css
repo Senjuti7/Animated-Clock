@@ -1,0 +1,96 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:'Courier New', Courier, monospace;
+}
+body {
+    background: rgb(31, 29, 29);
+}
+
+.clock{
+    height: 130px;
+    width: 460px;
+    font-size:60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 35%;
+    margin-top: 340px;
+    border-radius: 30px;
+    background: linear-gradient(to right, #555B6E, #89b0ae, #bee3db);
+    animation: animate 4s linear infinite;
+    /* transition: opacity 100ms linear; */
+    transition: all 3s ease;
+}
+@keyframes animate {
+    0%{
+        background: linear-gradient(to right, #555B6E, #89b0ae, #bee3db);
+        box-shadow: 0 0 10px #555B6E, 0 0 20px #555B6E, 
+        0 0 40px #555B6E, 0 0 80px #555B6E, 0 0 160px #555B6E;
+        
+    }
+    25%{
+        background: linear-gradient(to right, #3a5a40, #588157, #a3b18a);
+        box-shadow: 0 0 10px #3a5a40, 0 0 20px #3a5a40, 
+        0 0 40px #3a5a40, 0 0 80px #3a5a40, 0 0 160px #3a5a40;
+    }
+    50%{
+        background: linear-gradient(to right, #a53860, #da627d, #ffa5ab);
+        box-shadow: 0 0 10px #a53860, 0 0 20px #a53860, 
+        0 0 40px #a53860, 0 0 80px #a53860, 0 0 160px #a53860;
+    }
+    75%{
+        background: linear-gradient(to right, #cc5803, #e2711d, #ff9505);
+        box-shadow: 0 0 10px #cc5803, 0 0 20px #cc5803, 
+        0 0 40px #cc5803, 0 0 80px #cc5803, 0 0 160px #cc5803;
+    }
+    100%{
+        background: linear-gradient(to right, #7f5539, #9c6644, #b08968);
+        box-shadow: 0 0 10px #7f5539, 0 0 20px #7f5539, 
+        0 0 40px #7f5539, 0 0 80px #7f5539, 0 0 160px #7f5539;
+        
+    }
+}
+.clock::before{
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    background:  #99b4b5;
+    top: 70%;
+    left: 25%;
+    width: 50%;
+    height: 30%;
+    transform: perspective(1em) scale(1, 0.15);
+    filter: blur(1.7em);
+    opacity: 0.7;
+    animation: animate2 4s linear infinite ;
+
+}
+@keyframes animate2 {
+    0%{
+        background: linear-gradient(to right, #555B6E, #89b0ae, #bee3db);
+        box-shadow: 0 0 10px #555B6E, 0 0 20px #555B6E, 
+        0 0 40px #555B6E, 0 0 80px #555B6E, 0 0 160px #555B6E;
+    }
+    25%{
+        background: linear-gradient(to right, #3a5a40, #588157, #a3b18a);
+        box-shadow: 0 0 10px #3a5a40, 0 0 20px #3a5a40, 
+        0 0 40px #3a5a40, 0 0 80px #3a5a40, 0 0 160px #3a5a40;
+    }
+    50%{
+        background: linear-gradient(to right, #a53860, #da627d, #ffa5ab);
+        box-shadow: 0 0 10px #a53860, 0 0 20px #a53860, 
+        0 0 40px #a53860, 0 0 80px #a53860, 0 0 160px #a53860;
+    }
+    75%{
+        background: linear-gradient(to right, #cc5803, #e2711d, #ff9505);
+        box-shadow: 0 0 10px #cc5803, 0 0 20px #cc5803, 
+        0 0 40px #cc5803, 0 0 80px #cc5803, 0 0 160px #cc5803;
+    }
+    100%{
+        background: linear-gradient(to right, #7f5539, #9c6644, #b08968);
+        box-shadow: 0 0 10px #7f5539, 0 0 20px #7f5539, 
+        0 0 40px #7f5539, 0 0 80px #7f5539, 0 0 160px #7f5539;
+    }
+}
